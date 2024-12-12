@@ -1,0 +1,235 @@
+
+<html>
+
+    <title>Reece Brogden's Portfolio</title>
+    <style>
+        
+        .Header{
+            text-align:center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 2%;
+        }
+        .projects{
+            /*border: 1px black solid;*/
+            float:left;
+            height:fit-content;
+        }
+        #work{
+            margin-left:2%;
+            width: 30%;  
+        }
+        #personal{
+            margin-left:2%;
+            width: 30%;
+        }
+        .pProject{
+            border: 2px gray solid;
+        }
+        .school{
+            float:left;
+            width: 30%;
+            margin-left:2%;
+        }
+        .school > p{
+            border: 2px gray solid;
+        }
+        p{
+            text-align: left;
+        }
+        #linkTreeA{
+
+        }
+
+    </style>
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> -->
+<body>
+    <!-- Header div -->
+    <div class="Header">
+        <div>
+        <h1> Reece Brogden's Portfolio </h1>
+        <a id="linkTreeA" href="https://reece-brogden.com">LinkTree</a>
+        </div>
+    <!-- Work experience -->
+    <div class="projects" id="work">
+        <h3>Work Experience</h3>
+        <p class="pProject" id="Thoroughbred">
+            <b>Thoroughbred Project</b> <i>August 2024 - December 2024</i>
+            <br/>
+            Working with two clients at the Gluck Equine Research Center, 
+			a group of students and I were tasked with improving on a website
+			that allows the user to interface with a MySQL database. Firstly,
+			we improved the searching functions by implementing a proper API 
+			that can be called in order to retrieve a JSON containing all of
+			a specific horse's data. Alongside updating the search back end, 
+			we also improved on statistical functions that display the data in
+			a more human-readable format. This was done using the Google Charts 
+			library, which also allows a user to view subsections of the graph in 
+			more detail. Finally, we updated the front end to be more in line with 
+			the University of Kentucky's aesthetic.
+
+        </br>
+        </br>
+        <i>PHP, SQL, HTML, JavaScript, Docker</i>
+        </p>
+        <p class="pProject" id="ATS">
+            <b>Active Therapy Systems LLC (ATS)</b> <i>May 2022 - Jan 2023</i>
+            <br/>
+            At ATS I was responsible for creating code for multiple aspects of the both site and an android application.  
+            On the site I wrote PHP for generating PDF files based on data given to me through an API call. I also helped in 
+            creating a android application, I was responsible for making static helper classes and a graphing system that would map 
+            out a patients blood pressure over time. Finally, I performed quality checks on the site and application to report 
+            any major or minor bugs that may have appeared during development. 
+        </br>
+        </br>
+        <i>PHP, Java, Android Studio</i>
+        </p>
+        
+    </div>
+
+        <!-- Personal Projects -->
+    <div class="projects" id="personal">
+        <h3>Personal Projects</h3>
+        <p class="pProject" id="Calculator">
+            <b>Simple Calculator</b><i>June 2024</i>
+            </br>
+            I made a calculator that does simple arithmetic (add, subtract, multiply, divide, power, modulo, trig, etc.)
+            , and also allows the user to graph their equations on a 
+            2D plane. 
+        </br>
+        </br>
+        <i>Python</i>
+        </p>
+        <p class="pProject" id="ThisWebsite">
+            <b>This website:</b><i>September 2023</i>
+            <br/>
+            This website is hosted on an Apache24 server located on my home computer. 
+            All HTML, PHP, and JavaScript code running on this site has been developed by me. 
+            Additionally, I have implemented a tunneling system using CloudFlared to bypass the need for a static IP address, 
+            which would typically be provided by my ISP. I also have to do this because my ISP uses a system called CGNat,
+            so my router's IP is not the public ip someone can use to visit this site.
+        </br>
+        </br>
+        <i>PHP, HTML, JavaScript, Apache24, CloudFlared</i>
+        </p>
+               
+        <p class="pProject" id="Weather">
+            <b>Weather API:</b><i>July 2023</i>
+            <br/>
+            I created a JavaScript based webpage
+            that allows users to retrieve weather data from 
+            an online API based on latitude and longitude coordinates,
+            along with their preferred units. Users can input these details, 
+            and the site will display the relevant information.
+            <a href="Weather.html" style="color:blue">Weather.html</a>
+        </br>
+        </br>
+        <i>JavaScript</i>
+        </p> 
+        <p class="pProject" id="Bingo">
+            <b>Bingo Game:</b><i>August 2023</i>
+            <br/>
+            I have developed a simple automated Bingo game which adheres to the rules of traditional Bingo. It can be found here: 
+            <a href="Bingo.php" style="color:blue">Bingo.php</a>
+        </br>
+        </br>
+        <i>PHP</i>
+        </p>
+        <p class="pProject" id="birdbot">
+            <b>Discord Bot:</b><i>July 2020 - Present</i>
+            <br/>
+            I created a bot that I can use on my discord server to generate pictures from the internet 
+            based on a prompt given by any user. The bot can also act as a moderation tool by performing various administrator  
+            tasks at a significantly quicker pace.
+        </br>
+        </br>
+        <i>Python, JavaScript</i>
+        </p>
+        <p class="pProject" id="unity">
+            <b>Unity Projects:</b><i>Present</i>
+            <br/>
+            I have undertaken various mini projects within Unity to explore the software's capabilities. Here are a few examples:
+            <br/>
+            <br/>
+            1. Developed a 2D game enabling players to navigate through a virtual museum showcasing NASA projects.
+            <br/>
+            2. Created an interactive walkthrough illustrating Supreme Court rulings on specific cases, providing insights into judges' opinions.
+            <br/>
+            3. Implemented simple AI behaviors within 2D environments to simulate enemy interactions against a player.
+            <br/>
+            4. Designed a basic battle arena game where the player combats endlessly spawning adversaries, testing combat mechanics and endurance.
+        </br>
+        </br>
+        <i>C#, Unity</i>
+        </p>
+        <p class="pProject" id="UE4/5">
+            <b>Unreal Engine:</b><i>Present</i>
+            <br/>
+            Within unreal engine I have created multiple small horror games with groups of 4 people. We created a game with a 
+            simple objective of finding a key and escaping a monster in a large house. 
+            We made a game where the player wanders into an abandonded mine where the entrance then colapses 
+            behind them. The player must then make their way through the mine, avoiding any dangers that pop 
+            up as they travel further in. 
+        </p>
+        <p class="pProject" id="blender">
+            <b>Blender:</b><i>Present</i>
+            <br/>
+            I primarily use blender to create models for games and 3D printing, though have done some animation within the 
+            tool as well. 
+        </br>
+        </br>
+        <i>Python, Blender</i>
+        </p>
+    </div>
+    <div class="school work" id="school">
+        <h3>College Course Work</h3> 
+        <p>
+			<b>Natural Selection Simulator:</b><i>October 2024 - December 2024</i>
+            </br>
+			In python I made a simulation for natural selection. This 
+			program uses individual neural networks to simulate how entities would 
+			behave based on some sort of stimuli. After a set number of steps, a new generation
+			is created based on the previous generation's survivors. This is done using a 
+			genetic algorithm that splices genomes together. These new entities are then placed
+			into the same environment where the process starts again. Eventually this will result in a 
+			population that can best survive the environment they are placed into.
+        </br>
+        </br>
+        <i>Python</i>
+		</p>
+		<p>
+			<b>Rubix Cube Solver:</b> <i>October 2024</i>
+            </br>
+			Using Python, I created a rubix cube in a digital environment. 
+			The cube contains functions to print it to command line, rotate a specific face, 
+			and shuffle the cube. </br>
+			The solver is an implementation of the A* algorithm. It generates a 
+			tree of possible solutions to the rubix cube, and calculates how
+			close a node may be by using a heursitic. The heursitic in the case is
+			found by summing how many unique colors are on each side, then using the max value
+			of the six sides minus one.
+        </br>
+        </br>
+        <i>C++</i>
+		</p>
+        <p>
+            <b>DBMS Project:</b><i>January 2024 - May 2024</i>
+            <br/>
+            A group of students and I had to compile and 
+            manipulate an open source DBMS. We ended up 
+            using FirebirdDB with the goal of creating 
+            significantly faster query speeds on frequently used 
+            queries. This was done by using a wrapper that would 
+            moniter all used queries, and store the most common ones 
+            in a cache. The queries were removed based on a TTL, and 
+            eventually replaced. This showed significant gains in speed 
+            by roughly 30%.
+        </br>
+        </br>
+        <i>Python, SQL, FirebirdDB</i>
+        </p>
+    </div>
+    </div>
+</body>
+</html>

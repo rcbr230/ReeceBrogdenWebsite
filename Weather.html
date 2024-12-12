@@ -1,0 +1,102 @@
+<html>
+
+<title>Weather API</title>
+<body>
+
+<style>
+
+    #mainDiv{
+        text-align: center;
+    }
+    #ButtonUI{
+        text-align: center;
+        margin-top: 25px;
+    }
+    #WeatherReport{
+        height:50%;
+        border: 2px black solid;
+        margin-top:25px;
+    }
+
+
+</style>
+ 
+    <div id="mainDiv">
+        <h2>Weather app using API calls with JavaScript/ECMAScript!</h2>
+
+        <!-- <button onclick="checkWeather(1,2,3)">click me!</button> -->
+        <input id="latitude" type="text" placeholder="Your latitude">
+        <input id="longitude" type="text" placeholder="Your longitude">
+        <select name="units" id="units">
+            <option value="Metric">Metric</option>
+            <option value="Imperial">Imperial</option>
+        </select>
+
+    </div>
+
+    <div id="ButtonUI">
+        <button onclick="checkWeather()">Check weather</button>
+    </div>
+
+    <div id="WeatherReport">
+
+        
+        <p id="temp"><b>Temperature: </b></p>
+        <br\>
+        <p id="weather"><b>Weather: </b></p>
+        <br\>
+        <p id="description"></p>
+
+
+    </div>
+    <script>
+        // example:
+        // let x = document.createElement("h4");
+        // let y = document.createTextNode("testing JS");
+        // x.appendChild(y);
+
+        // let e = document.getElementById("mainDiv");
+        // e.appendChild(x);
+
+        function checkWeather(){
+            const key = "15dc457988d13df65deb79f6ce56ebae";
+            let lat = document.getElementById("latitude");
+            let long = document.getElementById("longitude");
+            let unit = document.getElementById("units");
+
+            // console.log("lat "+lat);
+            // console.log("lon "+long);
+            // console.log("unit "+unit);
+            fetch("https://api.openweathermap.org/data/3.0/onecall?lat="+lat.value+"&lon="+long.value+"&appid="+key+"&units="+unit.value)
+                .then(response=>{
+                    return response.json();
+                }).then(json=>{
+                    console.log(json);
+                    // console.log(json["current"]["temp"]);
+
+                    drawInfo(json,unit);
+                });
+
+        }
+
+        function drawInfo(json,unit){
+            // draw temperature, weather + description +photo(?)
+            let tempE = document.getElementById("temp");
+            let weather = document.getElementById("weather");
+            let desc = document.getElementById("description");
+
+            //Metric or Imperial units!
+            switch(unit.value){
+                case "Metric":
+                    tempE.innerHTML = "<b>Temperature: </b>" + json["current"]["temp"] +"C";
+                    break;
+                case "Imperial":
+                    tempE.innerHTML = "<b>Temperature: </b>" + json["current"]["temp"] + "F";
+                    break;  
+            }
+            weather.innerHTML = "<b>Weather: </b>" + json["current"]["weather"][0]["main"];
+            desc.innerHTML = json["current"]["weather"][0]["description"];
+        }
+    </script>
+</body>
+</html>
